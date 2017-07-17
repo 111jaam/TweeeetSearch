@@ -13,21 +13,26 @@ class TSVCTweetsList: UIViewController {
     var viewModelsTweet: [TSViewModelTweet] = []
     
     @IBOutlet weak var tblTweets: UITableView!
+    @IBOutlet weak var actvityTweetsList: UIActivityIndicatorView!
     
-    var strSearchString = " "
+    var strSearchString = ""
+    var strLocation = ""
+    var strTime = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.        
         
+        actvityTweetsList.startAnimating()
+        tblTweets.isHidden = true
         callWeb()
     }
     
     func callWeb(){
         viewModelsTweet = []
         
-        TSNetManagerTweets.sharedInstance.createRequest(withSearchString: strSearchString)
+        TSNetManagerTweets.sharedInstance.createRequest(withSearchString: strSearchString, strLocation: strLocation, strTime: strTime)
         TSNetManagerTweets.sharedInstance.delegate = self
     }
 }
@@ -52,8 +57,31 @@ extension TSVCTweetsList: UITableViewDataSource {
 extension TSVCTweetsList: TSProtocolManagerTweets {
     
     func sendData(arrayOfViewModel: Array<TSViewModelTweet>){
-        
+                
         viewModelsTweet = arrayOfViewModel
-        self.tblTweets.reloadData()
+        
+        if viewModelsTweet.count > 1 {
+            self.title = "Tweets Found:\(viewModelsTweet.count)"
+            
+            let alertView = UIAlertController(title: "Message", message: "Tweets Found:\(viewModelsTweet.count)", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                self.tblTweets.isHidden = false
+                self.tblTweets.reloadData()
+                self.actvityTweetsList.stopAnimating()
+                self.actvityTweetsList.isHidden = true
+            })
+            alertView.addAction(action)
+            self.present(alertView, animated: true, completion: nil)
+            
+        }else{
+            let alertView = UIAlertController(title: "Message", message: "No Tweets found, try searching something else.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                self.actvityTweetsList.stopAnimating()
+                self.actvityTweetsList.isHidden = true
+                _ = self.navigationController?.popViewController(animated: true)
+            })
+            alertView.addAction(action)
+            self.present(alertView, animated: true, completion: nil)
+        }
     }
 }

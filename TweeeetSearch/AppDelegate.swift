@@ -14,14 +14,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    let consumerKey = "I1uVbmaV3QslykzaZlxoGG3Vx"
-    let consumerSecret = "bCAiuCmiRammvqIjUpu0OxWBH57875XzTDMCutC30Ryj0bO7ry"
+    var consumerKey = ""
+    var consumerSecret = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        //Set Twitter credentials
-        TweetKit.tokenCredentials = self.getBase64EncodeString()
+        //***************************** To Set Twitter credentials use either methods *****************************
+        //***************************** Method 1 *****************************
+        //***************************** Uncomment below 3 lines and enter your credentials *****************************
+        //        consumerKey = "ENTER YOUR CONSUMER KEY HERE"
+        //        consumerSecret = "ENTER YOUR CONSUMER SECRET HERE"
+        //        TweetKit.tokenCredentials = self.getBase64EncodeString()
+        
+        //***************************** OR *****************************
+        
+        //***************************** Method 2 *****************************
+        //***************************** USE Base64EncodedString *****************************
+        TweetKit.tokenCredentials = "STF1VmJtYVYzUXNseWt6YVpseG9HRzNWeDpiQ0FpdUNtaVJhbW12cUlqVXB1ME94V0JINTc4NzVYelRETUN1dEMzMFJ5ajBiTzdyeQ=="
         
         return true
     }

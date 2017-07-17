@@ -16,12 +16,8 @@ class TSViewModelTweet {
     init(_ model: TSModelTweet){
         if let modelResult = model.text {
             title = "\(modelResult)"
-            webLink = " "
-            memberType = " "
-            
-//            title = modelResult.sliceUpto(to: "|")!
-//            webLink = "http\(modelResult.slice(from: "|http", to: "|")!)"
-//            memberType = modelResult.lastWord
+            webLink = model.urlMedia
+            memberType = " "            
         }
     }
 }

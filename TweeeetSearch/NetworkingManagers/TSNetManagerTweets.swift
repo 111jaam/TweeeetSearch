@@ -14,21 +14,41 @@ class TSNetManagerTweets{
     static let sharedInstance = TSNetManagerTweets()
     var delegate: TSProtocolManagerTweets?
     
-    var tweets:[[String:Any]]?
+    var tweets:Any?
     
-    func createRequest(withSearchString strSearch: String)
+    func createRequest(withSearchString strSearch: String, strLocation: String, strTime: String)
     {
         var arrayViewModel: [TSViewModelTweet] = []
         
-        TweetKit.getTweets(withSearchTerm: strSearch) { (tweets) in
+        TweetKit.getTweets(withSearchTerm: strSearch, location: strLocation, recent: strTime) { (tweets) in
+            
             self.tweets = tweets
             
-            for arrayType in self.tweets! {
-                let dictFromArray = arrayType as NSDictionary
-                let modelParsed = TSModelTweet(dictFromArray)
-                let viewModel = TSViewModelTweet(modelParsed)
+//            if let dataDict = tweets as? [String:Any],
+//                let statuses = dataDict["statuses"] as? [[String:Any]] {
+//                print(statuses)
+//            }
+            
+            do {
+                let json = try JSON(data: self.tweets as! Data)
+//                if let userName = json["statuses"][2]["entities"].rawString() {
+//                    //Now you got your value
+//                    
+//                }
                 
-                arrayViewModel.append(viewModel)
+                
+                for arrayType in json["statuses"] {
+                    let jsonDictFromArray = arrayType as (String, JSON)
+                    let modelParsed = TSModelTweet(jsonDictFromArray)
+                    
+                    if (modelParsed.urlMedia != nil) {
+                        let viewModel = TSViewModelTweet(modelParsed)
+                        arrayViewModel.append(viewModel)
+                    }
+                }
+            }
+            catch _ {
+                // Error handling
             }
             
             self.delegate?.sendData(arrayOfViewModel: arrayViewModel)

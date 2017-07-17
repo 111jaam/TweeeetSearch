@@ -11,6 +11,9 @@
 		6E79134B1F1B8A8F00C1A3CD /* TSViewModelTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E79134A1F1B8A8F00C1A3CD /* TSViewModelTweet.swift */; };
 		6E79134D1F1B8B8D00C1A3CD /* TSExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E79134C1F1B8B8D00C1A3CD /* TSExtensionString.swift */; };
 		6E7913501F1B8E2400C1A3CD /* TSNetManagerTweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E79134F1F1B8E2400C1A3CD /* TSNetManagerTweets.swift */; };
+		6E7913831F1C218500C1A3CD /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7913821F1C218500C1A3CD /* SwiftyJSON.swift */; };
+		6E7913851F1C660600C1A3CD /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7913841F1C660600C1A3CD /* Global.swift */; };
+		6E7913881F1C70D700C1A3CD /* LazyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7913871F1C70D700C1A3CD /* LazyImage.swift */; };
 		6EA7D9CD1F1B79E900938B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7D9CC1F1B79E900938B4F /* AppDelegate.swift */; };
 		6EA7D9D21F1B79E900938B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7D9D01F1B79E900938B4F /* Main.storyboard */; };
 		6EA7D9D41F1B79E900938B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7D9D31F1B79E900938B4F /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 		6E79134A1F1B8A8F00C1A3CD /* TSViewModelTweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TSViewModelTweet.swift; path = ViewModels/TSViewModelTweet.swift; sourceTree = "<group>"; };
 		6E79134C1F1B8B8D00C1A3CD /* TSExtensionString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TSExtensionString.swift; path = Extensions/TSExtensionString.swift; sourceTree = "<group>"; };
 		6E79134F1F1B8E2400C1A3CD /* TSNetManagerTweets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TSNetManagerTweets.swift; path = NetworkingManagers/TSNetManagerTweets.swift; sourceTree = "<group>"; };
+		6E7913821F1C218500C1A3CD /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		6E7913841F1C660600C1A3CD /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Globals/Global.swift; sourceTree = "<group>"; };
+		6E7913871F1C70D700C1A3CD /* LazyImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyImage.swift; sourceTree = "<group>"; };
 		6EA7D9C91F1B79E900938B4F /* TweeeetSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweeeetSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA7D9CC1F1B79E900938B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EA7D9D11F1B79E900938B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +120,34 @@
 			name = "Networking Managers";
 			sourceTree = "<group>";
 		};
+		6E7913861F1C660B00C1A3CD /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				6E7913841F1C660600C1A3CD /* Global.swift */,
+			);
+			name = Globals;
+			sourceTree = "<group>";
+		};
+		6E7913891F1C79C600C1A3CD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6E7913871F1C70D700C1A3CD /* LazyImage.swift */,
+				6E7913821F1C218500C1A3CD /* SwiftyJSON.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		6E79138A1F1C7A0700C1A3CD /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				6E7913491F1B8A4300C1A3CD /* Models */,
+				6E7913461F1B89F300C1A3CD /* ViewModels */,
+				6EA7D9EB1F1B7AFF00938B4F /* VCs */,
+				6EA7D9EC1F1B7B0800938B4F /* Cells */,
+			);
+			name = MVVM;
+			sourceTree = "<group>";
+		};
 		6EA7D9C01F1B79E900938B4F = {
 			isa = PBXGroup;
 			children = (
@@ -135,12 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				6EA7D9CC1F1B79E900938B4F /* AppDelegate.swift */,
-				6E7913511F1B8E3400C1A3CD /* Networking Managers */,
-				6E79134E1F1B8B9200C1A3CD /* Extensions */,
-				6E7913491F1B8A4300C1A3CD /* Models */,
-				6E7913461F1B89F300C1A3CD /* ViewModels */,
-				6EA7D9EB1F1B7AFF00938B4F /* VCs */,
-				6EA7D9EC1F1B7B0800938B4F /* Cells */,
+				6E79138A1F1C7A0700C1A3CD /* MVVM */,
 				6EA7D9EA1F1B7AE200938B4F /* Support Files */,
 			);
 			path = TweeeetSearch;
@@ -157,6 +186,10 @@
 		6EA7D9EA1F1B7AE200938B4F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				6E7913861F1C660B00C1A3CD /* Globals */,
+				6E7913511F1B8E3400C1A3CD /* Networking Managers */,
+				6E79134E1F1B8B9200C1A3CD /* Extensions */,
+				6E7913891F1C79C600C1A3CD /* Helpers */,
 				6EA7D9D01F1B79E900938B4F /* Main.storyboard */,
 				6EA7D9D31F1B79E900938B4F /* Assets.xcassets */,
 				6EA7D9D51F1B79E900938B4F /* LaunchScreen.storyboard */,
@@ -276,10 +309,13 @@
 				6E7913501F1B8E2400C1A3CD /* TSNetManagerTweets.swift in Sources */,
 				6E7913481F1B8A2B00C1A3CD /* TSModelTweet.swift in Sources */,
 				6E79134D1F1B8B8D00C1A3CD /* TSExtensionString.swift in Sources */,
+				6E7913881F1C70D700C1A3CD /* LazyImage.swift in Sources */,
 				6E79134B1F1B8A8F00C1A3CD /* TSViewModelTweet.swift in Sources */,
 				6EA7D9EE1F1B7ECD00938B4F /* TSCellTweetList.swift in Sources */,
 				6EA7D9CD1F1B79E900938B4F /* AppDelegate.swift in Sources */,
+				6E7913831F1C218500C1A3CD /* SwiftyJSON.swift in Sources */,
 				6EA7D9E51F1B7A6500938B4F /* TSVCSearchInput.swift in Sources */,
+				6E7913851F1C660600C1A3CD /* Global.swift in Sources */,
 				6EA7D9E71F1B7AA000938B4F /* TSVCTweetsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
