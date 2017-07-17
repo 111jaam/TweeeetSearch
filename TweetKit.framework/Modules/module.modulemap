@@ -1,0 +1,10 @@
+framework module TweetKit {
+  umbrella header "TweetKit.h"
+
+  export *
+  module * { export * }
+}
+
+module TweetKit.Swift {
+    header "TweetKit-Swift.h"
+}

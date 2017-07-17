@@ -14,6 +14,9 @@
 		6E7913831F1C218500C1A3CD /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7913821F1C218500C1A3CD /* SwiftyJSON.swift */; };
 		6E7913851F1C660600C1A3CD /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7913841F1C660600C1A3CD /* Global.swift */; };
 		6E7913881F1C70D700C1A3CD /* LazyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7913871F1C70D700C1A3CD /* LazyImage.swift */; };
+		6E7913901F1C829300C1A3CD /* TweetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E79138F1F1C829300C1A3CD /* TweetKit.framework */; };
+		6E7913911F1C829700C1A3CD /* TweetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E79138F1F1C829300C1A3CD /* TweetKit.framework */; };
+		6E7913921F1C829700C1A3CD /* TweetKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E79138F1F1C829300C1A3CD /* TweetKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6EA7D9CD1F1B79E900938B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7D9CC1F1B79E900938B4F /* AppDelegate.swift */; };
 		6EA7D9D21F1B79E900938B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7D9D01F1B79E900938B4F /* Main.storyboard */; };
 		6EA7D9D41F1B79E900938B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EA7D9D31F1B79E900938B4F /* Assets.xcassets */; };
@@ -21,26 +24,7 @@
 		6EA7D9E51F1B7A6500938B4F /* TSVCSearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7D9E41F1B7A6500938B4F /* TSVCSearchInput.swift */; };
 		6EA7D9E71F1B7AA000938B4F /* TSVCTweetsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7D9E61F1B7AA000938B4F /* TSVCTweetsList.swift */; };
 		6EA7D9EE1F1B7ECD00938B4F /* TSCellTweetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7D9ED1F1B7ECD00938B4F /* TSCellTweetList.swift */; };
-		6EA7D9EF1F1B858A00938B4F /* TweetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA7D9E31F1B7A0900938B4F /* TweetKit.framework */; };
-		6EA7D9F01F1B858A00938B4F /* TweetKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA7D9E31F1B7A0900938B4F /* TweetKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6EA7D9E21F1B7A0900938B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EA7D9DE1F1B7A0900938B4F /* TweetKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6EA7D9551F1B6BB300938B4F;
-			remoteInfo = TweetKit;
-		};
-		6EA7D9F11F1B858A00938B4F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6EA7D9DE1F1B7A0900938B4F /* TweetKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6EA7D9541F1B6BB300938B4F;
-			remoteInfo = TweetKit;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6EA7D9F31F1B858A00938B4F /* Embed Frameworks */ = {
@@ -49,7 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6EA7D9F01F1B858A00938B4F /* TweetKit.framework in Embed Frameworks */,
+				6E7913921F1C829700C1A3CD /* TweetKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,13 +48,13 @@
 		6E7913821F1C218500C1A3CD /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		6E7913841F1C660600C1A3CD /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = Globals/Global.swift; sourceTree = "<group>"; };
 		6E7913871F1C70D700C1A3CD /* LazyImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyImage.swift; sourceTree = "<group>"; };
+		6E79138F1F1C829300C1A3CD /* TweetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TweetKit.framework; sourceTree = "<group>"; };
 		6EA7D9C91F1B79E900938B4F /* TweeeetSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweeeetSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EA7D9CC1F1B79E900938B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EA7D9D11F1B79E900938B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6EA7D9D31F1B79E900938B4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EA7D9D61F1B79E900938B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EA7D9D81F1B79E900938B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EA7D9DE1F1B7A0900938B4F /* TweetKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TweetKit.xcodeproj; path = ../TweetKit/TweetKit.xcodeproj; sourceTree = "<group>"; };
 		6EA7D9E41F1B7A6500938B4F /* TSVCSearchInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TSVCSearchInput.swift; path = VCs/TSVCSearchInput.swift; sourceTree = "<group>"; };
 		6EA7D9E61F1B7AA000938B4F /* TSVCTweetsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TSVCTweetsList.swift; path = VCs/TSVCTweetsList.swift; sourceTree = "<group>"; };
 		6EA7D9ED1F1B7ECD00938B4F /* TSCellTweetList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TSCellTweetList.swift; path = Cells/TSCellTweetList.swift; sourceTree = "<group>"; };
@@ -81,7 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EA7D9EF1F1B858A00938B4F /* TweetKit.framework in Frameworks */,
+				6E7913901F1C829300C1A3CD /* TweetKit.framework in Frameworks */,
+				6E7913911F1C829700C1A3CD /* TweetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +136,7 @@
 		6EA7D9C01F1B79E900938B4F = {
 			isa = PBXGroup;
 			children = (
-				6EA7D9DE1F1B7A0900938B4F /* TweetKit.xcodeproj */,
+				6E79138F1F1C829300C1A3CD /* TweetKit.framework */,
 				6EA7D9CB1F1B79E900938B4F /* TweeeetSearch */,
 				6EA7D9CA1F1B79E900938B4F /* Products */,
 			);
@@ -173,14 +158,6 @@
 				6EA7D9EA1F1B7AE200938B4F /* Support Files */,
 			);
 			path = TweeeetSearch;
-			sourceTree = "<group>";
-		};
-		6EA7D9DF1F1B7A0900938B4F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6EA7D9E31F1B7A0900938B4F /* TweetKit.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6EA7D9EA1F1B7AE200938B4F /* Support Files */ = {
@@ -230,7 +207,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6EA7D9F21F1B858A00938B4F /* PBXTargetDependency */,
 			);
 			name = TweeeetSearch;
 			productName = TweeeetSearch;
@@ -265,28 +241,12 @@
 			mainGroup = 6EA7D9C01F1B79E900938B4F;
 			productRefGroup = 6EA7D9CA1F1B79E900938B4F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6EA7D9DF1F1B7A0900938B4F /* Products */;
-					ProjectRef = 6EA7D9DE1F1B7A0900938B4F /* TweetKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				6EA7D9C81F1B79E900938B4F /* TweeeetSearch */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		6EA7D9E31F1B7A0900938B4F /* TweetKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TweetKit.framework;
-			remoteRef = 6EA7D9E21F1B7A0900938B4F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6EA7D9C71F1B79E900938B4F /* Resources */ = {
@@ -321,14 +281,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6EA7D9F21F1B858A00938B4F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TweetKit;
-			targetProxy = 6EA7D9F11F1B858A00938B4F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6EA7D9D01F1B79E900938B4F /* Main.storyboard */ = {
@@ -451,6 +403,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 45S5U7KJGD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TweeeetSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -466,6 +422,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 45S5U7KJGD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TweeeetSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
