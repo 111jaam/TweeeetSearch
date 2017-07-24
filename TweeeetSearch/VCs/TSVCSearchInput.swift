@@ -33,6 +33,7 @@ class TSVCSearchInput: UIViewController, UITextFieldDelegate {
         strLocation = getlocation()
         
         strTime = "&result_type=recent"
+        print("git") 
     }
 
     override func didReceiveMemoryWarning() {
